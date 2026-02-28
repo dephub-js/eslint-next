@@ -1,0 +1,69 @@
+{
+  "name": "@dephub/eslint-next",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Opinionated modern ESLint configuration for Next.js projects.",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prepublishOnly": "pnpm clean && pnpm check-types && pnpm build && pnpm lint",
+    "release": "pnpm publish",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint . --fix --max-warnings 0",
+    "clean": "rm -rf dist",
+    "build": "vite build",
+    "dev": "vite build -w"
+  },
+  "keywords": [
+    "eslint-next",
+    "lint",
+    "eslint",
+    "eslint-config",
+    "nextjs",
+    "react",
+    "typescript",
+    "ts",
+    "config",
+    "preset",
+    "linter",
+    "code-quality"
+  ],
+  "author": {
+    "name": "Estarlin R",
+    "email": "dev@estarlincito.com",
+    "url": "https://estarlincito.com"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dephub-js/eslint-next#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dephub-js/eslint-next.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dephub-js/eslint-next/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "dependencies": {
+    "@dephub/eslint-react": "^1.0.0",
+    "@next/eslint-plugin-next": "^16.1.6",
+    "@types/eslint": "^9.6.1",
+    "eslint": "^10.0.2"
+  },
+  "devDependencies": {
+    "@dephub/eslint-ts": "^1.0.1",
+    "@dephub/glob": "^1.0.1",
+    "@dephub/path": "^1.0.1",
+    "@types/node": "^25.3.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
